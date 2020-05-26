@@ -1,17 +1,49 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 body{
 	background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQFae31SqPLCYAquJu2rsTNTAWmDeWeCN9BwXX4gtStyOw_4Kh7&usqp=CAU');
 	background-size: auto 100vh;
-	font-family: Arial;
+	font-family: 'Source Code Pro', monospace;
 	height: 100vh;
+	font-size: 10px;
+}
+
+/* Se a tela tiver pelo menos 400px vai carregar estes estilos */
+@media (min-width: 400px) {
+	body{
+		font-size: 14px;
+	}
+}
+
+/* Breakpoint */
+@media (min-width: 600px) {
+	body{
+		font-size: 16px;
+	}
+}
+
+header{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.menu{
+	background-color: white;
+	position: fixed;
+	width: 100vw;
+	top: 0;
+	z-index: 1;
 }
 
 .menu ul{
 	display: flex;
 	justify-content: space-around;
-}
-
-.menu{
-	background-color: #ffffff;
 }
 
 .menu li{
@@ -23,8 +55,30 @@ a{
 	text-decoration: none;
 }
 
-a:hover{
+.menu a:hover{
 	text-decoration: underline;
+	background-color: teal;
+	color: white;
+}
+
+.menu a{
+	display: block;
+	padding: 10px 20px;
+	transition: 2s;
+}
+
+.title{
+	transform: scale(0.2) translateY(50px);
+	opacity: 0;
+
+	animation: linear 2s animasionTitle forwards;
+}
+
+@keyframes animasionTitle{
+	100% {
+		transform: scale(1) translateY(0);
+		opacity: 1;
+	}
 }
 
 .site-subtitle,
@@ -33,6 +87,144 @@ a:hover{
 	text-align: center;
 }
 
+.site-title{
+	font-size: 4em;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
 .site-subtitle{
 	font-style: italic;
+	font-family: 'Press Start 2P', cursive;
+	line-height: 2em;
+}
+
+.sobre,
+.contato,
+.portifolio{
+	padding: 2em;
+	min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+	.container{
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.sobre h2,
+.contato h2,
+.portifolio h2{
+	font-family: 'Press Start 2P', cursive;
+	color: whitesmoke;
+	margin-bottom: 1.5em;
+	font-size: 2em;
+}
+
+.sobre p{
+	color: white;
+	margin-bottom: 1em;
+	text-indent: 1.4em;
+	text-align: justify;
+}
+
+.sobre a{
+	color: cyan;
+	text-decoration: underline;
+}
+
+/* .sobre a:hover{
+
+} */
+
+.sobre .avatar {
+	float: left;
+	margin-right: 2em;
+}
+
+.sobre .avatar img{
+	/* border-radius: 50%; */
+	clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+.portifolio .grid{
+	display: grid;
+	gap: 2em;
+}
+
+@media (min-width: 560px){
+	.portifolio .grid{
+		grid-template-columns: 240px 240px;
+	}
+}
+
+@media (min-width: 880px){
+	.portifolio .grid{
+		grid-template-columns: repeat(3, 240px);
+		align-content: center;
+		justify-content: center;
+		height: calc(100vh - 48px - 8em);
+	}
+}
+
+.portifolio figure{
+	text-align: center;
+}
+
+.img-portfolio{
+	height: 180px;
+	width: 100%;
+	object-fit: cover;
+	object-position: left bottom;
+	border-radius:  5px;
+	transition: transform 500ms;
+}
+
+/* .img-portfolio:hover{
+	transform: scale(1.2) rotate(1.5deg);
+} */
+
+.flip-card{
+	perspective: 500px;
+}
+
+.card{
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 1s;
+}
+
+.flip-card:hover .card{
+	transform: rotateY(180deg);
+}
+
+.cardfront, .cardback{
+	position: absolute;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+}
+
+.cardback{
+	background-color: white;
+	height: 180px;
+	width: 100%;
+	transform: rotateY(180deg);
+}
+
+.contato .icons{
+	text-align: center;
+}
+
+.contato a{
+	color: whitesmoke;
+	font-size: 4em;
+	transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover{
+	text-decoration: none;
+	text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
 }

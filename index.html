@@ -1,21 +1,96 @@
+<!-- https://alvarocjesus.github.io/imersaocss/ -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./img/logo-via-logohub.png" type="image/x-icon">
         <title>Alvaro Coelho Jesus</title>
         <link rel="stylesheet" href="./css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Press+Start+2P&family=Source+Code+Pro&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/e08a29ccb4.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Portifólio</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </nav>
-            <h1 class="site-title">Alvaro Coelho Jesus</h1>
-            <h2 class="site-subtitle">Jr. frontend developer</h2>
+            <div>
+                <nav class="menu">
+                    <ul class="container">
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#portifolio">Portifólio</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="title">
+                <h1 class="site-title">Álvaro Coelho Jesus</h1>
+                <h2 class="site-subtitle">Jr. frontend developer</h2>
+            </div>
         </header>
+        <section class="sobre container" id="sobre">
+            <h2>Sobre</h2>
+            <figure class="avatar">
+                <img src="https://instagram.fgru7-1.fna.fbcdn.net/v/t51.2885-19/s150x150/23667550_321639691649407_6709477599187304448_n.jpg?_nc_ht=instagram.fgru7-1.fna.fbcdn.net&_nc_ohc=2P5BD-C1sSYAX8-8PnT&oh=36bb604678389ebe0d9d7de9ccc1aece&oe=5EEA0994" alt="Alvaro Coelho Jesus">
+            </figure>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolorum quis illo id officiis provident pariatur consequuntur cum? Eligendi vero error earum! Rerum, repellat molestiae laboriosam laborum tempore eum dolorum.</p> 
+
+            <p>In officia libero repellendus aut error quibusdam vero labore sapiente voluptate. Illo provident voluptatibus nemo enim quas fuga alias est dolore consectetur magnam at cupiditate assumenda, sed possimus quo adipisci.</p> 
+
+            <p>Excepturi iusto optio possimus facere error corrupti fuga quam cumque distinctio voluptatum, provident quisquam explicabo! Minus iste voluptatum quasi deserunt, error a laborum corrupti! Voluptatibus in odit minus doloremque necessitatibus.</p> 
+
+            <p>Este site foi construido durante a <a href="https://www.alura.com.br/imersao-css">Imersao CSS da Alura</a> </p> 
+
+        </section>
+        <section class="portifolio container" id="portifolio">
+            <h2>Portfólio</h2>
+            <div class="grid">
+                <div class="flip-card">
+                    <div class="card">
+                        <figure class="cardfront">
+                            <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
+                            <figcaption>eCommerce</figcaption>
+                        </figure>
+                        <div class="cardback">Oi eu sou a parte de tras ;></div>
+                    </div>
+                </div>
+                
+                <div class="flip-card">
+                    <div class="card">
+                        <figure class="cardfront">
+                            <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
+                            <figcaption>Mobile</figcaption>
+                        </figure>
+                        <div class="cardback">Oi eu sou a parte de tras;></div>
+                    </div>
+                </div>
+                
+
+                <div>
+                    <figure>
+                        <img class="img-portfolio" src="./img/webdesign-creditos-domenico-loia-unsplash.jpg" alt="Web design">
+                        <figcaption>Web design</figcaption>
+                    </figure>
+                    <div>Oi eu sou a parte de tras;></div>
+                </div>
+
+                <div>
+                    <figure>
+                        <img class="img-portfolio" src="./img/projpessoais-creditos-hal-gatewood-unsplash.jpg" alt="Projetos pessoais">
+                        <figcaption>Projetos pessoais</figcaption>
+                    </figure>
+                    <div>Oi eu sou a parte de tras;></div>
+                </div>
+
+            </div>
+        </section>
+        <section id="contato" class="contato container">
+            <h2>Contato</h2>
+            <div class="grid icons">
+                <a target="_blank" href="http://github.com/alvarocjesus"><i class="fab fa-github"></i></a>
+                <a target="_blank" href="http://github.com/alvarocjesus"><i class="fab fa-linkedin"></i></a>
+                <a target="_blank" href="http://github.com/alvarocjesus"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:alvim.coelho.jesus@gmail.com"><i class="far fa-envelope"></i></a>
+            </div>
+        </section>
     </body>
 </html>
